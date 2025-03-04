@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS学习指南</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/aws-logo.png" alt="AWS学习指南" height="30" class="d-inline-block align-top">
+                AWS学习指南
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="certificates.html">证书分类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tools.html">工具分类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">学习资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner区域 -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold">AWS学习指南</h1>
+                    <p class="lead mb-4">探索AWS云服务认证和工具，开启您的云计算职业之旅</p>
+                    <a href="certificates.html" class="btn btn-primary btn-lg">探索证书</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门证书卡片 -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">热门AWS证书</h2>
+            <div class="row g-4">
+                <!-- 证书卡片1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 certificate-card">
+                        <div class="card-body">
+                            <h5 class="card-title">AWS Certified Cloud Practitioner</h5>
+                            <div class="badge bg-success mb-2">基础级</div>
+                            <p class="card-text">适合初学者的入门级认证，涵盖AWS云服务基础知识。</p>
+                            <p><strong>推荐人群：</strong>云计算初学者、非技术角色、管理人员</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="cert-1-details">查看详情</button>
+                            <div class="card-details mt-3" id="cert-1-details" style="display: none;">
+                                <p>这是AWS认证体系中最基础的认证，不需要深厚的技术背景，主要考察对AWS云服务的基本理解、核心服务、安全性和架构最佳实践的知识。</p>
+                                <p><strong>考试时长：</strong>90分钟</p>
+                                <p><strong>题目数量：</strong>65题</p>
+                                <p><strong>及格分数：</strong>700/1000</p>
+                                <a href="certificates.html#cloud-practitioner" class="btn btn-sm btn-primary">学习路径</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 证书卡片2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 certificate-card">
+                        <div class="card-body">
+                            <h5 class="card-title">AWS Certified Solutions Architect - Associate</h5>
+                            <div class="badge bg-primary mb-2">专业级</div>
+                            <p class="card-text">面向具有AWS架构设计经验的专业人士的认证。</p>
+                            <p><strong>推荐人群：</strong>解决方案架构师、系统管理员、开发人员</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="cert-2-details">查看详情</button>
+                            <div class="card-details mt-3" id="cert-2-details" style="display: none;">
+                                <p>这是AWS最受欢迎的认证之一，主要考察在AWS上设计可用、成本效益高、容错性好且可扩展的系统的能力。</p>
+                                <p><strong>考试时长：</strong>130分钟</p>
+                                <p><strong>题目数量：</strong>65题</p>
+                                <p><strong>及格分数：</strong>720/1000</p>
+                                <a href="certificates.html#solutions-architect-associate" class="btn btn-sm btn-primary">学习路径</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 证书卡片3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 certificate-card">
+                        <div class="card-body">
+                            <h5 class="card-title">AWS Certified Developer - Associate</h5>
+                            <div class="badge bg-primary mb-2">专业级</div>
+                            <p class="card-text">针对在AWS平台上开发和维护应用程序的开发人员。</p>
+                            <p><strong>推荐人群：</strong>软件开发人员、DevOps工程师</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="cert-3-details">查看详情</button>
+                            <div class="card-details mt-3" id="cert-3-details" style="display: none;">
+                                <p>这个认证专注于使用AWS服务进行应用程序开发的技能，包括代码级开发和AWS SDK的使用。</p>
+                                <p><strong>考试时长：</strong>130分钟</p>
+                                <p><strong>题目数量：</strong>65题</p>
+                                <p><strong>及格分数：</strong>720/1000</p>
+                                <a href="certificates.html#developer-associate" class="btn btn-sm btn-primary">学习路径</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 推荐工具卡片 -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">推荐AWS工具</h2>
+            <div class="row g-4">
+                <!-- 工具卡片1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 tool-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Amazon EC2</h5>
+                            <div class="badge bg-info mb-2">计算</div>
+                            <p class="card-text">弹性云计算服务，提供可扩展的计算容量。</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-1-details">查看详情</button>
+                            <div class="card-details mt-3" id="tool-1-details" style="display: none;">
+                                <p><strong>使用场景：</strong>Web应用托管、批处理、高性能计算、开发测试环境</p>
+                                <p>Amazon EC2是AWS的核心服务之一，允许用户租用虚拟服务器来运行应用程序。它提供完全控制的计算环境，支持多种实例类型以满足不同的计算需求。</p>
+                                <a href="tools.html#ec2" class="btn btn-sm btn-primary">学习资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 工具卡片2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 tool-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Amazon S3</h5>
+                            <div class="badge bg-warning text-dark mb-2">存储</div>
+                            <p class="card-text">简单存储服务，提供高度可扩展的对象存储。</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-2-details">查看详情</button>
+                            <div class="card-details mt-3" id="tool-2-details" style="display: none;">
+                                <p><strong>使用场景：</strong>静态网站托管、数据备份、数据湖、内容分发</p>
+                                <p>Amazon S3是一种对象存储服务，提供行业领先的可扩展性、数据可用性、安全性和性能。它适用于从简单的备份到复杂的大数据分析应用的各种使用场景。</p>
+                                <a href="tools.html#s3" class="btn btn-sm btn-primary">学习资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 工具卡片3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 tool-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Amazon RDS</h5>
+                            <div class="badge bg-danger mb-2">数据库</div>
+                            <p class="card-text">关系型数据库服务，简化数据库设置和管理。</p>
+                            <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-3-details">查看详情</button>
+                            <div class="card-details mt-3" id="tool-3-details" style="display: none;">
+                                <p><strong>使用场景：</strong>Web应用数据存储、电子商务平台、企业应用</p>
+                                <p>Amazon RDS使设置、操作和扩展云中的关系数据库变得容易。它提供经济实惠的可调整容量，同时自动执行耗时的管理任务，支持多种数据库引擎。</p>
+                                <a href="tools.html#rds" class="btn btn-sm btn-primary">学习资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p>© 2023 AWS学习指南 | 本网站仅用于学习目的</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 自定义JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

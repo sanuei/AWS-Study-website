@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具分类 - AWS学习指南</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 自定义CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="main-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/aws-logo.png" alt="AWS学习指南" height="30" class="d-inline-block align-top">
+                AWS学习指南
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="certificates.html">证书分类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tools.html">工具分类</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">学习资源</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">关于</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <h1 class="text-center">AWS 工具分类</h1>
+            <p class="text-center lead">探索AWS提供的各种云服务工具，助力您的云计算项目</p>
+        </div>
+    </div>
+
+    <!-- 顶部分类导航 -->
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-pills mb-4 justify-content-center" id="tools-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="compute-tab" data-bs-toggle="pill" data-bs-target="#compute" type="button" role="tab" aria-controls="compute" aria-selected="true">计算</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="storage-tab" data-bs-toggle="pill" data-bs-target="#storage" type="button" role="tab" aria-controls="storage" aria-selected="false">存储</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="database-tab" data-bs-toggle="pill" data-bs-target="#database" type="button" role="tab" aria-controls="database" aria-selected="false">数据库</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="network-tab" data-bs-toggle="pill" data-bs-target="#network" type="button" role="tab" aria-controls="network" aria-selected="false">网络</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 工具卡片内容区域 -->
+        <div class="tab-content" id="tools-tabContent">
+            <!-- 计算类工具 -->
+            <div class="tab-pane fade show active" id="compute" role="tabpanel" aria-labelledby="compute-tab">
+                <div class="row g-4">
+                    <!-- EC2 -->
+                    <div class="col-md-4" id="ec2">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Amazon EC2</h5>
+                                <div class="badge bg-info mb-2">计算</div>
+                                <p class="card-text">弹性云计算服务，提供可扩展的计算容量。</p>
+                                <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-ec2-details">查看详情</button>
+                                <div class="card-details mt-3" id="tool-ec2-details" style="display: none;">
+                                    <p><strong>使用场景：</strong>Web应用托管、批处理、高性能计算、开发测试环境</p>
+                                    <p>Amazon EC2是AWS的核心服务之一，允许用户租用虚拟服务器来运行应用程序。它提供完全控制的计算环境，支持多种实例类型以满足不同的计算需求。</p>
+                                    <p><strong>主要特点：</strong></p>
+                                    <ul>
+                                        <li>多种实例类型（计算优化、内存优化、存储优化等）</li>
+                                        <li>按需实例、预留实例和竞价型实例的灵活定价模式</li>
+                                        <li>与其他AWS服务的无缝集成</li>
+                                    </ul>
+                                    <a href="https://aws.amazon.com/cn/ec2/" class="btn btn-sm btn-primary" target="_blank">官方文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Lambda -->
+                    <div class="col-md-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">AWS Lambda</h5>
+                                <div class="badge bg-info mb-2">计算</div>
+                                <p class="card-text">无服务器计算服务，让您无需管理服务器即可运行代码。</p>
+                                <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-lambda-details">查看详情</button>
+                                <div class="card-details mt-3" id="tool-lambda-details" style="display: none;">
+                                    <p><strong>使用场景：</strong>事件驱动型应用、后端微服务、数据处理</p>
+                                    <p>AWS Lambda让您无需预置或管理服务器即可运行代码。您只需为实际消耗的计算时间付费，代码未运行时不产生费用。</p>
+                                    <p><strong>主要特点：</strong></p>
+                                    <ul>
+                                        <li>支持多种编程语言（Node.js、Python、Java、Go等）</li>
+                                        <li>自动扩展，从每天几个请求到每秒数千个请求</li>
+                                        <li>与其他AWS服务的原生集成</li>
+                                    </ul>
+                                    <a href="https://aws.amazon.com/cn/lambda/" class="btn btn-sm btn-primary" target="_blank">官方文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ECS -->
+                    <div class="col-md-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Amazon ECS</h5>
+                                <div class="badge bg-info mb-2">计算</div>
+                                <p class="card-text">高度可扩展的容器编排服务，支持Docker容器。</p>
+                                <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-ecs-details">查看详情</button>
+                                <div class="card-details mt-3" id="tool-ecs-details" style="display: none;">
+                                    <p><strong>使用场景：</strong>微服务架构、批处理、应用迁移</p>
+                                    <p>Amazon ECS是一项完全托管的容器编排服务，让您可以轻松部署、管理和扩展容器化应用程序。</p>
+                                    <p><strong>主要特点：</strong></p>
+                                    <ul>
+                                        <li>与AWS服务深度集成（如负载均衡、IAM、VPC）</li>
+                                        <li>支持Fargate无服务器计算引擎</li>
+                                        <li>内置任务调度和集群管理功能</li>
+                                    </ul>
+                                    <a href="https://aws.amazon.com/cn/ecs/" class="btn btn-sm btn-primary" target="_blank">官方文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 存储类工具 -->
+            <div class="tab-pane fade" id="storage" role="tabpanel" aria-labelledby="storage-tab">
+                <div class="row g-4">
+                    <!-- S3 -->
+                    <div class="col-md-4" id="s3">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Amazon S3</h5>
+                                <div class="badge bg-warning text-dark mb-2">存储</div>
+                                <p class="card-text">简单存储服务，提供高度可扩展的对象存储。</p>
+                                <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-s3-details">查看详情</button>
+                                <div class="card-details mt-3" id="tool-s3-details" style="display: none;">
+                                    <p><strong>使用场景：</strong>静态网站托管、数据备份、数据湖、内容分发</p>
+                                    <p>Amazon S3是一种对象存储服务，提供行业领先的可扩展性、数据可用性、安全性和性能。它适用于从简单的备份到复杂的大数据分析应用的各种使用场景。</p>
+                                    <p><strong>主要特点：</strong></p>
+                                    <ul>
+                                        <li>99.999999999%的数据持久性</li>
+                                        <li>多种存储类别以优化成本</li>
+                                        <li>强大的访问控制和加密功能</li>
+                                    </ul>
+                                    <a href="https://aws.amazon.com/cn/s3/" class="btn btn-sm btn-primary" target="_blank">官方文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- EBS -->
+                    <div class="col-md-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Amazon EBS</h5>
+                                <div class="badge bg-warning text-dark mb-2">存储</div>
+                                <p class="card-text">弹性块存储，为EC2实例提供持久性块级存储卷。</p>
+                                <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-target="tool-ebs-details">查看详情</button>
+                                <div class="card-details mt-3" id="tool-ebs-details" style="display: none;">
+                                    <p><strong>使用场景：</strong>数据库存储、企业应用、吞吐量密集型应用</p>
+                                    <p>Amazon EBS提供在EC2实例生命周期之外持久存在的块级存储卷。每个EBS卷都会自动在其可用区内复制，以防止组件故障导致的数据丢失。</p>
+                                    <p><strong>主要特点：</strong></p>
+                                    <ul>
+                                        <li>多种卷类型（SSD、HDD）以满足不同性能需求</li>
+                                        <li>快照功能用于备份和恢复</li>
+                                        <li>加密选项保护敏感数据</li>
+                                    </ul>
+                                    <a href="https://aws.amazon.com/cn/ebs/" class="btn btn-sm btn-primary" target="_blank">官方文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Glacier -->
+                    <div class="col-md-4">
+                        <div class="card h-100 tool-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Amazon S3 Glacier</h5>
+                                <div class="badge bg-warning text-dark mb-2">存储</div>
+                                <p class="card-text">低成本的云存储服务，用于数据归档和长期备份。</p>
+                                <button class="btn btn-sm btn-outline-primary mt-2 toggle-details" data-
